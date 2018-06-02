@@ -1,0 +1,33 @@
+<h1>Artists</h1> 
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Genre</th>
+        <th colspan="2"></th>
+    </tr>
+
+
+    <% @artists.each do |artist| %>
+        <tr>
+            <td><%= artist.name %></td>
+            <td><%= artist.genre %></td>
+            <td><%= link_to 'Show', artist_path(artist) %></td>
+            <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
+            <td><%= link_to 'Remove', artist_path(artist),
+                        method: :delete,
+                        data: {confirm: "OK to remove?"} %></td>
+        </tr>
+        <% if @show_albums %>
+            <% artist.albums.each do |album| %>
+                <tr>
+                    <td></td>
+                    <td><%= album.title %></td>
+                    <td><%= album.year %></td>
+                </tr>
+            <% end %>
+        <% end %>
+    <% end %>
+
+</table>
+<%= link_to 'Add Artist', new_artist_path() %>
+

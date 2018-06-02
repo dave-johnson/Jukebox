@@ -1,0 +1,14 @@
+<h4>Add Album</h4>
+<%= form_with(model: [ @artist, @artist.albums.build ], local: true) do |form| %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+    </p>
+    <p>
+        <%= form.label :year %><br>
+        <%= form.number_field :year %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
