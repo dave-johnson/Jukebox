@@ -26,13 +26,17 @@ Until I get the screens build for updating Artist and Album, I'll be adding a bu
 rails db:reset
 ```
 
+## Design Ideas
+ERB diagram
+![](ERB.jpg?raw=true)
+
+Screen Flow
+![](ScreenFlow.jpg?raw=true)
+
 ## TODO list
 
 This is in no particular order.   Just keeping notes on things to do.  I'll hack them off the list as I go along.
 
-* Export list to CSV
-* Display album year range
-* Fix All Album list.  I need to get a list of all albums
 * Add screens to add/edit albums
 * Add Track information
 * Add Playlists
@@ -41,4 +45,5 @@ This is in no particular order.   Just keeping notes on things to do.  I'll hack
 * Make the screens look usable.  UX friends will laugh, or cry at this version
 * Add RSpec testing.  Yeah, I know this should have been done while I was coding.  I need to brush up on RSpec as well.
 * Add a toggle button on the Artist list to show the albums.  http://localhost:3000/artists?show_albums=true
+
 
