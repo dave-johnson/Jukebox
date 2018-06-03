@@ -40,4 +40,5 @@ This is in no particular order.   Just keeping notes on things to do.  I'll hack
 * Add album artwork
 * Make the screens look usable.  UX friends will laugh, or cry at this version
 * Add RSpec testing.  Yeah, I know this should have been done while I was coding.  I need to brush up on RSpec as well.
+* Add a toggle button on the Artist list to show the albums.  http://localhost:3000/artists?show_albums=true
 

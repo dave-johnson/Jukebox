@@ -5,6 +5,7 @@
         <th>Genre</th>
         <th>Years</th>
         <th>Albums</th>
+        <th>Common Word</th>
         <th colspan="5"></th>
     </tr>
 
@@ -15,6 +16,7 @@
             <td><%= artist.genre %></td>
             <td><%= artist.year_range %></td>
             <td><%= artist.album_count %></td>
+            <td><%= artist.common_word %></td>
             <td><%= link_to 'Show', artist_path(artist) %></td>
             <td><%= link_to 'Edit', edit_artist_path(artist) %></td>
             <td><%= link_to 'Remove', artist_path(artist),
