@@ -1,7 +1,6 @@
 class AlbumsController < ApplicationController
     def all 
-        @artist = Artist.first
-        @albums = @artist.albums
+        @albums = Album.all
     end
 
     def create
