@@ -2,6 +2,13 @@ class ArtistsController < ApplicationController
     def index
         @artists = Artist.all
         @show_albums = true if params[:show_albums] == "true"
+
+        respond_to do |format|
+            format.html
+            format.csv {
+                send_data @artists.to_csv, filename: "artists-#{Date.today}.csv" 
+            }
+        end
     end
 
     def edit
