@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
     def index
-        @artists = Artist.all
+        if params[:order] && (Artist.column_names.include? params[:order])
+            @artists = Artist.order(params[:order])
+        else
+            @artists = Artist.all
+        end
         @show_albums = true if params[:show_albums] == "true"
 
         respond_to do |format|
